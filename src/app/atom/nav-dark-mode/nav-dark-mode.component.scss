@@ -1,0 +1,12 @@
+svg{
+    border: 1px solid #EDF1F6;
+    border-radius: 8px;
+    &:hover{
+        border: 1px solid #455BED;
+        border-radius: 8px;
+        cursor: pointer;
+        & path{
+            fill: #455BED;
+        }
+    }
+}

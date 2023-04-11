@@ -1,0 +1,27 @@
+.sidebarSearchContainer{
+    border: 1px solid #C2C9E8;
+    border-radius: 8px;
+    background-color: #F8F9FD;
+    display: flex;
+    align-items: center;
+    &:focus-within, &:focus-visible{
+        border-color: #455BED;
+    }
+    &__icon{
+        margin: 0px 10px;
+    }
+    &__input{
+        width: 216px;
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        &:focus-visible{
+            border: none;
+            border-color: none;
+            outline: none;
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+}

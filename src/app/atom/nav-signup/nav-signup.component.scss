@@ -1,0 +1,18 @@
+.navbarSignup{
+    width: 152px;
+    height: 48px;
+    background: #4263FF;
+    border-radius: 8px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FEFEFE;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    &:hover{
+        background: #455BED;
+    }
+}

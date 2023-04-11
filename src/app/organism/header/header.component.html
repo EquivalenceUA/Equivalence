@@ -1,0 +1,22 @@
+<div class="nav-left">
+    <app-nav-breadcrumbs></app-nav-breadcrumbs>
+</div>
+<div class="nav-rigth">
+    <app-nav-language></app-nav-language>
+    <app-nav-dark-mode></app-nav-dark-mode>
+    <div class="nav-logIn">
+        <ng-container *ngIf="!isLoggedIn; else signedIn">
+            <app-nav-login (logInEvent)="logInUser($event)"></app-nav-login>
+            <app-nav-signup></app-nav-signup>
+        </ng-container>
+
+    </div>
+</div>
+
+<ng-template #signedIn>
+    <div class="buttonholder">
+        <app-nav-notice></app-nav-notice>
+        <app-nav-account (showComponentEvent)="showTheDrop($event)"></app-nav-account>
+        <app-nav-user-dropdown *ngIf="showHiddenDrop"></app-nav-user-dropdown>
+    </div>
+</ng-template>

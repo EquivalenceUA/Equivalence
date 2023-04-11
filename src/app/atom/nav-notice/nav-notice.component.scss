@@ -1,0 +1,15 @@
+.notice{
+    width: 48px;
+    height: 48px;
+    border: 1px solid #EDF1F6;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        svg>path{
+            stroke: #455BED;
+            cursor: pointer;
+        }
+    }
+}

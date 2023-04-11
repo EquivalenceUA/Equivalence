@@ -1,0 +1,18 @@
+.logInButton{
+    width: 86px;
+    height: 48px;
+    border: 1px solid #C2C9E8;
+    border-radius: 8px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #211D4F;
+    background-color: transparent;
+    margin: 0 5px;
+    &:hover{
+        border-color: #455BED;
+        cursor: pointer;
+    }
+}

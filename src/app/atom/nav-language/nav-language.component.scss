@@ -1,0 +1,33 @@
+
+.language-dropdownContainer{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.language-dropdown{
+    padding: 0px;
+    width: 65px;
+    height: 24px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-align: end;
+    cursor: pointer;
+    & option{
+        display: flex;
+        justify-content: center;
+    }
+    &:hover, &:focus{
+        border: 1px solid #C2C9E8;
+        border-radius: 4px;
+    }
+}
+.language-icon{
+    position: absolute;
+    top: 15px;
+}

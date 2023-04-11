@@ -1,0 +1,12 @@
+.account-div{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    background-color: white;
+    height: 100%;
+    cursor: pointer;
+    & img{
+        margin-right: 4px;
+    }
+}

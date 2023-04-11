@@ -1,0 +1,22 @@
+app-nav-language{
+    position: relative;
+}
+
+.nav-rigth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 389px;
+    height: 48px;
+}
+
+.buttonholder{
+    display: flex;
+}
+app-nav-notice{
+    margin-right: 1rem;
+}
+app-nav-user-dropdown{
+    position: absolute;
+    top: 4rem;
+}

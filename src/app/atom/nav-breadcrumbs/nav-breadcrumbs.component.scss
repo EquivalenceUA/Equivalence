@@ -1,0 +1,15 @@
+p{
+    height: 24px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    & .sercondary-crumbs{
+        color: #C2C9E8;
+    }
+    & .main-crumbs{
+        color: #211D4F;
+    }
+    cursor: pointer;
+}
