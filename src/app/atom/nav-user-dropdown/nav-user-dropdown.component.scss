@@ -6,10 +6,25 @@
     left: -40px;
     align-items: flex-start;
     padding: 16px;
-    gap: 12px;
     border: 1px solid #C2C9E8;
     border-radius: 12px;
+    button{
+        & svg>path{
+            fill: #211D4F;
+        }
+        margin-bottom: 10px;
+        & :hover{
+            & h3{
+                color: #455BED;
+            }
+            & svg> path{
+                fill: #455BED;
+            }
+        }
+    }
     &__user{
+        margin-bottom: 5px;
+        border-bottom: 1px solid #C2C9E8;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -51,6 +66,8 @@
         }
     }
     &__profile{
+        margin-bottom: 5px;
+        border-bottom: 1px solid #C2C9E8;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -73,6 +90,8 @@
         }
     }
     &__log{
+        margin-bottom: 5px;
+        border-bottom: 1px solid #C2C9E8;
         display: flex;
         flex-direction: column;
         width: 100%;

@@ -1,0 +1,15 @@
+.term-hash{
+    display: flex;
+    & > * {
+        padding: 0 8px;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    & a{
+        color: #4263FF;
+        opacity: 0.6;
+    }
+}
