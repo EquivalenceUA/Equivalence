@@ -1,0 +1,64 @@
+.word-def-main{
+    margin-top: 24px;
+    &__explanation{
+        margin: 8px 0;
+    }
+
+    &__info{
+        border: 1px solid #C2C9E8;
+        border-radius: 12px;
+        padding: 16px;
+    }
+    &__translation{
+        margin: 16px 0;
+        display: flex;
+        gap: 8px;
+        & .flag{
+
+        }
+        & .translation{
+
+            &__word{
+
+            }
+        }
+    }
+
+    &__deffinitions{
+        margin: 32px 0;
+        & .head{
+            margin-bottom: 8px;
+        }
+        & .defins{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            & .definition{
+
+            }
+        }
+    }
+
+    &__examples{
+        & .head{
+            margin-bottom: 8px;
+        }
+        & .examples{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            &__eng{
+                & .example{
+                    margin: 16px 0;
+                }
+            }
+            &__ukr{
+                & .example{
+                   margin: 16px 0; 
+                }
+            }
+        }
+    }
+
+
+}

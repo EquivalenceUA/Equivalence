@@ -1,0 +1,11 @@
+<div class="category-tile">
+    <div class="category-tile__icon">
+        <img [src]="imageSourse" alt="imageSourse">        
+    </div>
+    <div class="category-tile_name">
+        <h3>{{category.category}}</h3>
+    </div>
+    <div class="comming-soon" *ngIf="category.category === 'Idioms'">
+        <h5>Comming soon</h5>
+    </div>
+</div>

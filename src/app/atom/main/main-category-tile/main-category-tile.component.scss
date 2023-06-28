@@ -1,0 +1,27 @@
+.category-tile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 24px;
+    background: #FEFEFE;
+    border: 1px solid #C2C9E8;
+    border-radius: 12px;
+    margin: 16px;
+    position: relative;
+}
+
+.comming-soon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 101px;
+    height: 28px;
+    background: #EDF1F6;
+    border-radius: 50px;
+    position: absolute;
+    top: -14px;
+    right: 24px;
+}

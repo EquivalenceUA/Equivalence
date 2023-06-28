@@ -1,0 +1,48 @@
+.word-def-head{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 52px);
+    border: 1px solid #C2C9E8;
+    border-radius: 12px;
+    padding: 16px;
+    &__word{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+        & .flag{
+            width: 22px;
+            display: flex;
+        }
+        & .word{
+
+        }
+        & .say{
+            border: none;
+            background: transparent;
+            width: 22px;
+            display: flex;
+        }
+    }
+    &__additional{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+       & .share{
+
+       }
+       & .save{
+
+       }
+    }
+    &__hash{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+        & .hashtag{
+
+        }
+    }
+}

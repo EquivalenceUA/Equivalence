@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
-import { MainSearchComponent } from 'src/app/atom/main-search/main-search.component';
-import { MainSearchPartComponent } from 'src/app/molecula/main-search-part/main-search-part.component';
-import { MainLanguageComponent } from 'src/app/atom/main-language/main-language.component';
-import { MainSwitchLangComponent } from 'src/app/atom/main-switch-lang/main-switch-lang.component';
-import { MainLangPartComponent } from 'src/app/molecula/main-lang-part/main-lang-part.component';
-import { MainButtonComponent } from 'src/app/atom/main-button/main-button.component';
-import { MainTopTermsComponent } from 'src/app/atom/main-top-terms/main-top-terms.component';
-import { MainTermHashComponent } from 'src/app/atom/main-term-hash/main-term-hash.component';
+import { FormsModule } from '@angular/forms';
+import { MainCategoriesComponent } from 'src/app/molecula/main/main-categories/main-categories.component';
+import { MainCategoryTileComponent } from 'src/app/atom/main/main-category-tile/main-category-tile.component';
+import { WordSearchModule } from '../word-search/word-search.module';
 
 
 
@@ -16,29 +12,19 @@ import { MainTermHashComponent } from 'src/app/atom/main-term-hash/main-term-has
 @NgModule({
   declarations: [
     MainComponent,
-    MainSearchComponent,
-    MainSearchPartComponent,
-    MainLanguageComponent,
-    MainSwitchLangComponent,
-    MainLangPartComponent,
-    MainButtonComponent,
-    MainTopTermsComponent,
-    MainTermHashComponent,
+    MainCategoriesComponent,
+    MainCategoryTileComponent,
     
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    WordSearchModule
   ],
   exports:[
     MainComponent,
-    MainSearchComponent,
-    MainSearchPartComponent,
-    MainLanguageComponent,
-    MainSwitchLangComponent,
-    MainLangPartComponent,
-    MainButtonComponent,
-    MainTopTermsComponent,
-    MainTermHashComponent,
+    MainCategoriesComponent,
+    MainCategoryTileComponent,
           
   ]
 })

@@ -1,2 +1,2 @@
 <h5 class="title">{{menu.name}}</h5>
-<app-sidebar-button *ngFor="let button of menu.buttons" [title]="button.buttonName" [imageLink]='button.buttonIcon'></app-sidebar-button>
+<app-sidebar-button *ngFor="let button of menu.buttons" [title]="button.buttonName" [imageLink]='button.buttonIcon' [routerHref]="button.routerHref"></app-sidebar-button>

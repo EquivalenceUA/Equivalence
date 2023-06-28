@@ -1,0 +1,20 @@
+.search-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border: none;
+    background: #4263FF;
+    border-radius: 8px;
+    width: 232px;
+    height: 48px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FEFEFE;
+}

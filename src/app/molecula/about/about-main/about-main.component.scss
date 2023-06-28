@@ -1,0 +1,18 @@
+.about-main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    &__left{
+        margin-right: 5rem;
+        color: #211D4F;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__right{
+        img{
+            height: 90%;
+        }
+    }
+}

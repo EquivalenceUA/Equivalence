@@ -1,0 +1,13 @@
+<form class="search">
+    <input type="text" 
+        class="search-input" 
+        name="searchTerm" 
+        placeholder="Type any term here" 
+        [(ngModel)]="searchTerm" 
+        (ngModelChange)="search(searchTerm.toString())"
+    >
+    <app-search-button></app-search-button>
+</form>
+<div class="results">
+    <app-search-result [results]="searchResults"></app-search-result>
+</div>

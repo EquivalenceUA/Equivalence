@@ -6,4 +6,5 @@ export interface Menu {
 export interface Button{
     buttonName: string;
     buttonIcon: string;
+    routerHref: string;
 }
