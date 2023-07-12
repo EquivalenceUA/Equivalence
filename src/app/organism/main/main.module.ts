@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MainCategoriesComponent } from 'src/app/molecula/main/main-categories/main-categories.component';
 import { MainCategoryTileComponent } from 'src/app/atom/main/main-category-tile/main-category-tile.component';
 import { WordSearchModule } from '../word-search/word-search.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { WordSearchModule } from '../word-search/word-search.module';
   imports: [
     CommonModule,
     FormsModule,
-    WordSearchModule
+    WordSearchModule,
+    RouterModule
   ],
   exports:[
     MainComponent,

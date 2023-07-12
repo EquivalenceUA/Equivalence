@@ -1,0 +1,21 @@
+h2{
+    color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+    text-align: center;
+    
+    font-size: 32px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+}
+p{
+    color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+    text-align: center;
+    
+    /* Desktop/Text/Body/Regular */
+    font-size: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}

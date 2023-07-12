@@ -1,0 +1,60 @@
+form{
+    max-width: 100%;
+    & div{
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0;
+    }
+    label{
+        color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+
+        /* Desktop/Text/Captions/Size L */
+        font-size: 14px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        &.errorLabel{
+            color:  var(--color-eq-functional-danger, #D92929);;
+        }
+    }
+    & input{
+        display: flex;
+        height: 48px;
+        padding: 3px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--color-eq-extended-input-strokes-default, #A9B4E4);
+        &::placeholder{
+            color: var(--color-eq-extended-input-strokes-default, #A9B4E4);
+            font-size: 16px;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+    & button{
+        border: none;
+        display: flex;
+        width: 478px;
+        padding: 12px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        opacity: 0.6399999856948853;
+        background: var(--color-eq-primary-main-for-btns, #4263FF);
+        color: var(--color-eq-primary-white-for-bg, #FEFEFE);
+        text-align: center;
+
+        /* Desktop/Text/Label/BTN Regular */
+        font-size: 16px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+}

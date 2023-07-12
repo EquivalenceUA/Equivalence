@@ -1,0 +1,33 @@
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .continue{
+        display: flex;
+        width: 478px;
+        padding: 12px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        display: flex;
+        border-radius: 8px;
+        border: 1px solid var(--color-eq-extended-input-strokes-default, #A9B4E4);
+        margin: 8px 0;
+        & img{
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+        p{
+            color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+            text-align: center;
+
+            /* Desktop/Text/Label/BTN Regular */
+            font-size: 16px;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
