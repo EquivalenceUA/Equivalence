@@ -1,0 +1,11 @@
+.sidebar-socials-container{
+    width: 220px;
+    display: flex;
+    justify-content: space-evenly;
+    & .sidebar-social{
+        & img{
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

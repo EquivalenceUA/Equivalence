@@ -1,6 +1,10 @@
-.search-lang-choose{
-    display: flex;
-    & > * {
-        padding: 24px 16px;
+.search-lang-part{
+    padding: 24px 16px;
+    .search-lang-choose{
+        margin-bottom: 16px;
+        display: flex;
+        & > * {
+            padding: 0 16px;
+        }
     }
 }

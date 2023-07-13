@@ -1,15 +1,17 @@
-<div class="nav-left">
-    <app-nav-breadcrumbs></app-nav-breadcrumbs>
-</div>
-<div class="nav-rigth">
-    <app-nav-language></app-nav-language>
-    <app-nav-dark-mode></app-nav-dark-mode>
-    <div class="nav-logIn">
-        <ng-container *ngIf="!isLoggedIn; else signedIn">
-            <app-nav-login (logInEvent)="logInUser($event)"></app-nav-login>
-            <app-nav-signup></app-nav-signup>
-        </ng-container>
-
+<div class="header-cont">
+    <div class="nav-left">
+        <app-nav-breadcrumbs></app-nav-breadcrumbs>
+    </div>
+    <div class="nav-rigth">
+        <app-nav-language></app-nav-language>
+        <app-nav-dark-mode></app-nav-dark-mode>
+        <div class="nav-logIn">
+            <ng-container *ngIf="!isLoggedIn; else signedIn">
+                <app-nav-login (logInEvent)="logInUser($event)"></app-nav-login>
+                <app-nav-signup></app-nav-signup>
+            </ng-container>
+    
+        </div>
     </div>
 </div>
 

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
   menus = [
     {
-      name: 'Main',
+      name: 'Vocabulary',
       buttons: [
         {
           buttonName:'Home',
@@ -16,19 +16,19 @@ export class SidebarComponent {
           routerHref: '/'
         }, 
         {
-          buttonName: 'Exercises',
-          buttonIcon: '../../../../assets/sidebar/Exercise-icon.svg',
+          buttonName: 'Categories',
+          buttonIcon: '../../../../assets/sidebar/categories.svg',
           routerHref: '/'
         },
         {
-          buttonName: 'About us',
-          buttonIcon: '../../../../assets/sidebar/About us-icon.svg',
-          routerHref: '/about'
+          buttonName: 'Donate term',
+          buttonIcon: '../../../../assets/sidebar/Add term-icon.svg',
+          routerHref: '/'
         }
       ]
     },
     {
-      name: 'Secondary',
+      name: 'Learning',
       buttons: [       
         {
           buttonName: 'Rules',
@@ -36,30 +36,16 @@ export class SidebarComponent {
           routerHref: '/about'
         },
         {
-          buttonName: 'Add term',
-          buttonIcon: '../../../../assets/sidebar/Add term-icon.svg',
-          routerHref: '/about'
-        }
-      ]
-    },
-    {
-      name: 'Contacts',
-      buttons: [
-        {
-          buttonName:'Istagram',
-          buttonIcon: '../../../../assets/sidebar/Instagram-icon.svg' ,
-          routerHref: '/about'
-        }, 
-        {
-          buttonName: 'Youtube',
-          buttonIcon: '../../../../assets/sidebar/Youtube-icon.svg',
+          buttonName: 'Exercises',
+          buttonIcon: '../../../../assets/sidebar/Exercise-icon.svg',
           routerHref: '/about'
         },
         {
-          buttonName: 'Contact us',
-          buttonIcon: '../../../../assets/sidebar/Contact us-icon.svg',
+          buttonName: 'About us',
+          buttonIcon: '../../../../assets/sidebar/About us-icon.svg',
           routerHref: '/about'
-        }
+        },
+
       ]
     },
   ]

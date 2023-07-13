@@ -8,6 +8,7 @@ import { SidebarButtonComponent } from 'src/app/atom/sidebar/sidebar-button/side
 import { SidebarMenuPartComponent } from 'src/app/molecula/sidebar-menu-part/sidebar-menu-part.component';
 import { SidebarSearchInputComponent } from 'src/app/atom/sidebar/sidebar-search-input/sidebar-search-input.component';
 import { SidebarIdiomOfTheDayComponent } from 'src/app/atom/sidebar/sidebar-idiom-of-the-day/sidebar-idiom-of-the-day.component';
+import { SidebarSocialComponent } from 'src/app/atom/sidebar/sidebar-social/sidebar-social.component';
 
 
 
@@ -20,6 +21,7 @@ import { SidebarIdiomOfTheDayComponent } from 'src/app/atom/sidebar/sidebar-idio
     SidebarMenuPartComponent,
     SidebarSearchInputComponent,
     SidebarIdiomOfTheDayComponent,
+    SidebarSocialComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { SidebarIdiomOfTheDayComponent } from 'src/app/atom/sidebar/sidebar-idio
     SidebarMenuPartComponent,
     SidebarSearchInputComponent,
     SidebarIdiomOfTheDayComponent,
+    SidebarSocialComponent,
   ]
 })
 export class SidebarModule { }
