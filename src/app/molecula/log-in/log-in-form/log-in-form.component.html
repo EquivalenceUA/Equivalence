@@ -1,0 +1,32 @@
+<form [formGroup]="logInForm">
+
+    <div>
+      <label class="errorLabel" for="email" style="display: none;">*Email. Enter a valid and correct email. Check your email.</label>
+      <label for="email">*Email:</label>
+      <input type="email" 
+             name="email" 
+             placeholder="example@gmail.com"
+             formControlName="email"
+      >
+    </div>
+    <div>
+      <label class="errorLabel" for="password" *ngIf="logInForm.get('password')?.errors && logInForm.get('password')?.hasError('minLength')">*Create a password. Password should be at least 8 characters long.</label>
+      <label for="password" >Password:</label>
+      <input type="password" 
+             name="password"
+             #password
+             placeholder="e.g. equiva23"
+             formControlName="password"
+      >
+    </div>
+    <div class="forgot">
+        <a href="#" class="forgot__a">Forgot password?</a>
+    </div>
+    <button type="submit" [disabled]="!logInForm.valid" (click)="checkingButton()">
+      Log in
+    </button>
+    <div class="donothave">
+        <p>Do not have an account?</p><a routerLink="/sign-up">Sign up</a>
+    </div>
+  </form>
+  

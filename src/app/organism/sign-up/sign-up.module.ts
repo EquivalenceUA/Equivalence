@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up.component';
-import { ContinueWithComponent } from 'src/app/molecula/sign-up-form/continue-with/continue-with.component';
 import { SignUpFormComponent } from 'src/app/molecula/sign-up-form/sign-up-form/sign-up-form.component';
+import { ContinueWithComponent } from 'src/app/molecula/sign-up-form/continue-with/continue-with.component';
 import { SignUpFormHeaderComponent } from 'src/app/molecula/sign-up-form/sign-up-form-header/sign-up-form-header.component';
-import { FormsModule } from '@angular/forms';
-import { PasswordStrengthDirective } from 'src/app/directives/password-strength.directive';
+import { AlreadyAccComponent } from 'src/app/atom/sign-up/already-acc/already-acc.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,20 +14,24 @@ import { PasswordStrengthDirective } from 'src/app/directives/password-strength.
 @NgModule({
   declarations: [
     SignUpComponent,
-    ContinueWithComponent,
     SignUpFormComponent,
+    ContinueWithComponent,
     SignUpFormHeaderComponent,
-    PasswordStrengthDirective
+    AlreadyAccComponent,
+    
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports:[
     SignUpComponent,
-    ContinueWithComponent,
     SignUpFormComponent,
-    SignUpFormHeaderComponent
+    ContinueWithComponent,
+    SignUpFormHeaderComponent,
+    AlreadyAccComponent,
   ]
 })
-export class SignUpFormModule { }
+export class SignUpModule { }

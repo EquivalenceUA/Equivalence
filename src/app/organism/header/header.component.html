@@ -8,7 +8,7 @@
         <div class="nav-logIn">
             <ng-container *ngIf="!isLoggedIn; else signedIn">
                 <app-nav-login (logInEvent)="logInUser($event)"></app-nav-login>
-                <app-nav-signup></app-nav-signup>
+                <app-nav-signup routerLink="/sign-up"></app-nav-signup>
             </ng-container>
     
         </div>

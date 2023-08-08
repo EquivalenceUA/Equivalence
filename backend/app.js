@@ -1,28 +1,24 @@
-const express = require('express');
-const mongoose = require('mongoose')
+const express = require("express");
+const mongoose = require("mongoose");
+const router = require("./routes/user-routes");
+const cors = require('cors'); 
 
+
+const corsOptions = {
+    origin: 'http://localhost:4200'
+  };
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended:true }));
+app.use(cors(corsOptions))
+app.use("/api/users", router);
 
-mongoose.connect('mongodb://localhost:27017/wordsdatabase', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-.then(()=>{
-    console.log('Connected to mongodb://localhost:27017/wordsdatabase')
-})
-.catch((error)=>{
-    console.log('Failed to connect to MongoDB', error);
-});
 
-app.use((req, res, next)=>{
-    console.log('the request is finished')
-    next();
-});
-
-app.use((req, res, next)=>{
-    res.send('Hello from express')
-});
-
-module.exports = app;
+mongoose
+    .connect(
+        "mongodb+srv://admin:Barabolya987^@cluster0.i2iiqvu.mongodb.net/?retryWrites=true&w=majority"
+    )
+    .then(()=>app.listen(3000))
+    .then(()=>
+    console.log("Connected to Database and listening to Localhost 5000")
+    )
+    .catch((err)=> console.error(err));

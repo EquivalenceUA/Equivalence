@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { NavAccountComponent } from 'src/app/atom/nav/nav-account/nav-account.component';
 import { NavNoticeComponent } from 'src/app/atom/nav/nav-notice/nav-notice.component';
 import { NavUserDropdownComponent } from 'src/app/atom/nav/nav-user-dropdown/nav-user-dropdown.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -25,11 +26,12 @@ import { NavUserDropdownComponent } from 'src/app/atom/nav/nav-user-dropdown/nav
     NavButtonHolderComponent,
     NavAccountComponent,
     NavNoticeComponent,
-    NavUserDropdownComponent
+    NavUserDropdownComponent,
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,

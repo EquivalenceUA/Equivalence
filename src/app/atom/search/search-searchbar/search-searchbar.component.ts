@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WORDS } from 'db/first-db';
+import { WordGetterService } from 'src/app/supplying-stuff/services/word-getter.service';
 
 @Component({
   selector: 'app-search-searchbar',
@@ -11,10 +12,12 @@ export class SearchSearchbarComponent {
   searchTerm: string = '';
   words = WORDS;
   searchResults: any;
-  constructor(){
+  constructor( private wordGetter:WordGetterService){
     
   }
   
+  //TODO: For Demonstration purpose only!
+
   search(term: string){
     return new Promise((res, rej)=>{
       if(term.length < 1){
@@ -34,5 +37,29 @@ export class SearchSearchbarComponent {
       }
     })
   }
+
+    // For backend purpose
+  // search(term: string){
+  //   console.log("search is going on! in search component")
+  //   return new Promise((res, rej)=>{
+  //     if(term.length < 1){
+  //       rej(this.searchResults = [] && console.error('No letters in search'))
+  //     }else{        
+  //       this.wordGetter.getWordsBySearchTerm(term)
+  //       .subscribe({
+  //         next: (response: any) => {
+  //           this.searchResults = response;
+  //         },
+  //         error: (error:any) =>{
+  //           console.error(error);
+  //         },
+  //         complete: ()=>{
+  //           console.log('response completed');
+  //         }
+  //       })
+  //       res(this.searchResults);
+  //     }
+  //   })
+  // }
 
 }
