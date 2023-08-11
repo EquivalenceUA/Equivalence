@@ -5,10 +5,12 @@ import { AboutComponent } from './organism/about/about.component';
 import { WordDefComponent } from './organism/word-def/word-def.component';
 import { LogInComponent } from './organism/log-in/log-in.component';
 import { HomeComponent } from './organism/home/home.component';
+import { SignUpComponent } from './organism/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: '', component: LogInComponent },
-  { path: 'home', 
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'log-in', component: LogInComponent },
+  { path: '', 
     component: HomeComponent,
     children:[
       {path: '', component: MainComponent},

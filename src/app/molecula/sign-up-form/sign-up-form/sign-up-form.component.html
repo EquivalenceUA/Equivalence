@@ -1,34 +1,59 @@
-<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+<form [formGroup]="signUpForm" (ngSubmit)="submitForm()">
   <div>
-    <label class="errorLabel" for="name" *ngIf="name.touched && !name.valid">*Username. It might contain your name, surname or nickname. </label>
-    <label *ngIf="name.untouched || name.valid" for="name">*Username:</label>
-    <input type="text" id="name" name="name" ngModel #name="ngModel"
-    placeholder="Anna Helyk" required minlength="3" maxlength="24">
+    <label class="errorLabel" for="username" *ngIf="username?.invalid && (username?.dirty || username?.touched); else normalUL">*Username. This field is required. </label>
+    <ng-template #normalUL>
+      <label for="username">
+             *Username:
+      </label>
+    </ng-template>
+    <input type="text" 
+    name="username" 
+    placeholder="Anna Helyk"
+    formControlName="username">
+    <div class="exclamation-holder" *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+      <img src="../../../../assets/log-in/smthWrong.svg" alt="Exclamation Mark">
+    </div>
   </div>
   <div>
-    <label class="errorLabel" for="email" *ngIf="email.touched && !email.valid">*Email. Enter a valid and correct email. Check your email.</label>
-    <label *ngIf="email.untouched || email.valid" for="email" (click)="logEmail(email)">*Email:</label>
+    <label class="errorLabel" for="email" *ngIf="email?.invalid && (email?.dirty || email?.touched); else normalE">*Email. Enter a valid and correct email. Check your email.</label>
+    <ng-template #normalE>
+      <label for="email">*Email:</label>
+    </ng-template>
     <input type="email" 
-           id="email" 
            name="email" 
-           ngModel 
-           #email="ngModel" 
-           required
-           email
            placeholder="example@gmail.com"
+           formControlName="email">
+           <div class="exclamation-holder" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <img src="../../../../assets/log-in/smthWrong.svg" alt="Exclamation Mark">
+           </div>
+  </div>
+  <div>
+    <div class="labelCurrier" *ngIf="password?.invalid && (password?.touched || password?.dirty); else normalP">
+      <label class="errorLabel" for="password" *ngIf="password?.hasError('minlength')">*Create a password. Password should be at least 8 characters long.</label>
+      <label class="errorLabel" for="password" *ngIf="password?.errors?.['passwordStrength']">*Create a password. Password should contain numbers, upper and lower case letters.</label>
+      <label class="errorLabel" for="password" *ngIf="password?.invalid || password?.hasError('reqired')">*Create a password. Password is required.</label>
+    </div>
+    <ng-template #normalP>
+      <label for="password" >*Create password:</label>
+    </ng-template>
+    <input type="password" 
+           name="password"
+           #passwordO
+           placeholder="e.g. equiva23"
+           formControlName="password"
     >
   </div>
   <div>
-    <label class="errorLabel" for="password" *ngIf="password.touched && !password.valid" >*Create a password. Password should be at least 8 characters long.</label>
-    <label for="password" *ngIf="password.untouched || password.valid">*Create password:</label>
-    <input type="password" id="password" name="password" ngModel #password="ngModel"
-    placeholder="e.g. equiva23" minlength="8" required passwordStrength>
-  </div>
-  <div>
-    <label class="errorLabel" for="confirmPassword" *ngIf="!confirm">*Repeat a password. The passwords you entered do not match.</label>
-    <label for="confirmPassword">*Repeat password:</label>
+    <label for="confirmPassword" *ngIf="(passwordO.value == confirmPassword.value)" else normalCP>*Repeat password:</label>
+    <ng-template #normalCP>
+      <label class="errorLabel" for="confirmPassword">*Repeat a password. The passwords you entered do not match.</label>
+    </ng-template>
     <input type="password" id="confirmPassword" name="confirmPassword" 
-    placeholder="e.g. equiva23" required #confirmPassword onkeyup="checkForPasswords(password.value, confirmPassword.value)">
+    placeholder="e.g. equiva23" required #confirmPassword>
   </div>
-  <button type="submit" [disabled]="!signupForm.valid">Create an account</button>
+  <button type="submit"
+  [disabled]="signUpForm.errors">
+    Create an account
+  </button>
 </form>
+

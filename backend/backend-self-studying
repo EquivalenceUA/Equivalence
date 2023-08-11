@@ -1,0 +1,4 @@
+В загальному опишу так: 
+ChatGPT - тупа свиня, все що він говорить потрібно перевіряти на up-to-date, для створення бази дани нам необхідно спочатку завантажити 
+монго шел mongo shell (mongosh). Це робиться за допомогою документації тут: "https://www.mongodb.com/docs/mongodb-shell/install/?utm_campaign=w3schools_mdb&utm_source=w3schools&utm_medium=referral"
+Далі перевіряємо версію за допомогою команди mongosh --version

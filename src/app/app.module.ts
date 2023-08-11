@@ -11,7 +11,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { LogInModule } from './organism/log-in/log-in.module';
 import { HomeModule } from './organism/home/home.module';
-import { SignUpFormModule } from './organism/sign-up-form/sign-up-form.module';
+import { SignUpModule } from './organism/sign-up/sign-up.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -29,11 +31,13 @@ import { SignUpFormModule } from './organism/sign-up-form/sign-up-form.module';
     LogInModule,
     RouterModule,
     HomeModule,
-    SignUpFormModule,
+    SignUpModule,
+    HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
