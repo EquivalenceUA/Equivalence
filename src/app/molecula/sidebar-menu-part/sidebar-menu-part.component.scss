@@ -1,8 +1,51 @@
-.title{
-    font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #C2C9E8;
+.menu{
+    display: flex;
+    flex-direction: column;
+    .title{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #C2C9E8;
+    }
+    
+    .sidebar-button{
+        height: 40px;
+        width: 216px;
+        border-radius: 8px;
+        padding: 10px;
+        align-items: center;
+        display: flex;
+        border: none;
+        background-color: #F8F9FD;
+        &__icon{
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            fill: #211D4F;
+        }
+        &__title{
+            height: 24px;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #211D4F;
+        }
+        &:hover{
+            cursor: pointer;
+            .sidebar-button__icon{
+                fill: #455BED;
+            }
+            .sidebar-button__title{
+                color: #455BED;
+            }
+        }
+        &:active{
+            cursor:crosshair;
+            background-color: #EDF1F6;
+        }
+    }
 }
