@@ -6,15 +6,19 @@
     padding: 10px;
     gap: 10px;
     border: none;
-    background: #4263FF;
-    border-radius: 8px;
     width: 232px;
     height: 48px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
+    border-radius: 8px;
+    background: #4263FF;
     color: #FEFEFE;
+    text-align: center;
+    font-size: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    &:hover{
+        background-color: #455BED;
+    }
 }

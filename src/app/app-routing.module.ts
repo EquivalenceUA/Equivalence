@@ -6,6 +6,8 @@ import { WordDefComponent } from './organism/word-def/word-def.component';
 import { LogInComponent } from './organism/log-in/log-in.component';
 import { HomeComponent } from './organism/home/home.component';
 import { SignUpComponent } from './organism/sign-up/sign-up.component';
+import { MainCategoriesComponent } from './molecula/main/main-categories/main-categories.component';
+import { SubcategoriesGridComponent } from './molecula/subcategories/subcategories-grid/subcategories-grid.component';
 
 const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
@@ -14,8 +16,10 @@ const routes: Routes = [
     component: HomeComponent,
     children:[
       {path: '', component: MainComponent},
-      { path: 'about', component: AboutComponent },
       { path: 'word', component: WordDefComponent },
+      { path: 'categories', component: MainCategoriesComponent},
+      {path: 'subcategories', component:SubcategoriesGridComponent},
+      { path: 'about', component: AboutComponent },
   ] },
 
   

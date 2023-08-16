@@ -9,7 +9,7 @@
         </ng-template>
         <div class="sidebar-button__title">Home</div>
     </button>
-    <button class="sidebar-button" routerLink="/" (mouseenter)="cateh = true" (mouseleave)="cateh = false">
+    <button class="sidebar-button" routerLink="/categories" (mouseenter)="cateh = true" (mouseleave)="cateh = false">
         <ng-container *ngIf="!cateh; else categories_hover">
             <img [src]='categories+default' alt="button-icon" class="sidebar-button__icon">
         </ng-container>

@@ -7,14 +7,15 @@ import { Category } from 'src/app/supplying-stuff/categories';
   styleUrls: ['./main-category-tile.component.scss']
 })
 export class MainCategoryTileComponent {
+  isHovered: boolean = false;
 
   @Input()
   category!: Category;
 
-  imageSourse = '';
+  default:string = '_default.svg';
+  hover:string = '_hover.svg';
 
   ngOnInit(){
-    this.imageSourse = 'assets/category-tile/'+ this.category.category + '.svg'
   }
   
 

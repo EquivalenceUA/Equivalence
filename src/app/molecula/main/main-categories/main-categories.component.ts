@@ -7,13 +7,16 @@ import { Category, categories } from 'src/app/supplying-stuff/categories';
   styleUrls: ['./main-categories.component.scss']
 })
 export class MainCategoriesComponent {
-  categories: Category[] = categories;
+
+  categories: Category[] = [];
 constructor(){
 
 }
 
 ngOnInit(){
-
+  this.categories = categories;
 }
+
+
 
 }

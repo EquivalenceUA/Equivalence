@@ -1,5 +1,5 @@
 <div class="search-results" *ngIf="results">
-    <button class="search-results__result" *ngFor="let result of results" (click)="passWordToWordComp(result)" routerLink="/word">
+    <button class="search-results__result" *ngFor="let result of results" routerLink="/word">
         <span class="left_part">
             <img src="../../../assets/main-lang/Eng-flag.svg" alt="flag">
             <h4>{{result.engWord}}</h4>

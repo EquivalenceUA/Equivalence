@@ -1,4 +1,4 @@
-.categories__title{
+.subcategories__title{
     padding: 0 24px;
     & h4{
         color:  #211D4F;
@@ -10,7 +10,7 @@
     }
 }
 
-.categories-grid{
+.subcategories-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 24px;
