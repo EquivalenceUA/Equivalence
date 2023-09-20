@@ -5,7 +5,7 @@ const cors = require('cors');
 
 
 const corsOptions = {
-    origin: 'http://localhost:4200'
+    origin: 'https://equivalenceua.github.io'
   };
 const app = express();
 app.use(express.json());
