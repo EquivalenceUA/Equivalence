@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { createPasswordStrengthValidator } from 'src/app/validators/password-strength.validator';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up-form',
@@ -7,30 +9,53 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./sign-up-form.component.scss']
 })
 export class SignUpFormComponent {
-
   user = {
-    name: '',
+    username: '',
     email: '',
     password: ''
   }
-  confirm : boolean = true; 
 
-  onSubmit(signupForm: NgForm) {
 
-    this.user = signupForm.value;
+  signUpForm!: FormGroup;
 
-    console.log('Form submitted:', this.user);
-    
-    signupForm.reset();
+  constructor(private fb: FormBuilder,
+              private http: HttpClient){
   }
 
-
-  logEmail(mor: any){
-    console.log(mor);
-    
+  ngOnInit(){
+    this.signUpForm = this.fb.group({
+      username: ['', {
+        validators: [Validators.required],
+        onUpdate: 'blur'
+      }],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8), createPasswordStrengthValidator()]],
+    })
   }
 
-  checkForPasswords(pass:string, conf:string){
-    return this.confirm = pass === conf;
+  get username(){ return this.signUpForm.get('username');}
+
+  get email(){ return this.signUpForm.get('email');}
+  get password(){ return this.signUpForm.get('password');}
+
+
+  submitForm(){
+    if(this.signUpForm.invalid){
+      console.error('The form is invalida!')
+    }
+    const user = this.signUpForm.value;
+    this.http.post('http://localhost:3000/api/users/sign-up', user)
+      .subscribe({
+        next: response=>{
+          console.log('User signed up successfully:', response);
+        },
+        error: error => {
+          console.error('Error signing up:', error);
+        },
+        complete: () => {
+          console.log('User signed up successfully.');
+        }
+      });
   }
+
 }

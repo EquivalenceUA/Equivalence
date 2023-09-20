@@ -4,9 +4,21 @@ form{
         display: flex;
         flex-direction: column;
         margin: 16px 0;
+        position: relative;
+        & .labelCurrier{
+            margin: 0;
+        }
+        & .exclamation-holder{
+            width: 16px;
+            margin: 0;
+            display: flex;
+            position: absolute;
+            right: 12px;
+            top: 37px;
+        }
     }
     label{
-        color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+        color:  #211D4F;
 
         /* Desktop/Text/Captions/Size L */
         font-size: 14px;
@@ -15,24 +27,31 @@ form{
         font-weight: 400;
         line-height: 20px;
         &.errorLabel{
-            color:  var(--color-eq-functional-danger, #D92929);;
+            color:  #D92929;
         }
     }
     & input{
         display: flex;
         height: 48px;
-        padding: 3px;
+        padding: 0px 12px;
         align-items: center;
         gap: 10px;
         border-radius: 8px;
-        border: 1px solid var(--color-eq-extended-input-strokes-default, #A9B4E4);
+        border: 1px solid #A9B4E4;
         &::placeholder{
-            color: var(--color-eq-extended-input-strokes-default, #A9B4E4);
+            color: #A9B4E4;
             font-size: 16px;
             font-family: Lato;
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
+        }
+        &:hover{
+            border-color: #455BED;
+        }
+        &:focus, &:focus-visible{
+            border: 1px solid #455BED;
+            outline: none;
         }
     }
     & button{
@@ -45,9 +64,10 @@ form{
         gap: 10px;
         border-radius: 8px;
         opacity: 0.6399999856948853;
-        background: var(--color-eq-primary-main-for-btns, #4263FF);
-        color: var(--color-eq-primary-white-for-bg, #FEFEFE);
+        background: #4263FF;
+        color: #FEFEFE;
         text-align: center;
+        cursor: pointer;
 
         /* Desktop/Text/Label/BTN Regular */
         font-size: 16px;
@@ -55,6 +75,15 @@ form{
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
-    }
+        &:hover{
+            background-color: #455BED;
+        }
+        &:disabled{
+            background-color: transparent;
+            color: #A9B4E4;
+            border: 1px solid #A9B4E4;
+            cursor: auto;
 
+        }
+    }
 }

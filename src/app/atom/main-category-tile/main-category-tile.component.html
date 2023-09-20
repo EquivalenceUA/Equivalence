@@ -1,0 +1,16 @@
+<div class="category-tile" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" routerLink="/subcategories">
+    <div class="category-tile__icon">
+        <ng-container *ngIf="!isHovered; else hover_image">
+            <img [src]='category.imgSrc+default' alt="button-icon" class="sidebar-button__icon">
+        </ng-container>
+        <ng-template #hover_image>
+            <img [src]='category.imgSrc+hover' alt="button-icon" class="sidebar-button__icon">
+        </ng-template>    
+    </div>
+    <div class="category-tile_name">
+        <h3>{{category.name}}</h3>
+    </div>
+    <div class="comming-soon" *ngIf="category.commingSoon">
+        <h5>Comming soon</h5>
+    </div>
+</div>

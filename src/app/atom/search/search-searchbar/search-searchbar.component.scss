@@ -2,7 +2,7 @@
     display: flex;
     &-input{
         display: flex;
-        margin: 0 24px;
+        margin: 0 17px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -13,6 +13,7 @@
         height: 48px;
         border: 1px solid #C2C9E8;
         border-radius: 8px;
+        outline: none;
         &::placeholder{
             font-family: 'Lato';
             font-style: normal;
@@ -22,6 +23,17 @@
             text-align: start;
             color: #C2C9E8;
         }
+        &:focus{
+            border-color: #455BED;
+        }
+    }
+    &__clear{
+        display: flex;
+        position: relative;
+        right: 55px;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
     }
 }
 .results{

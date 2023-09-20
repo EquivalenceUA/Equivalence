@@ -1,11 +1,11 @@
 <div class="search-lang-part">
     <div class="search-lang-choose">
-        <app-search-language selectedLanguage="eng" changeLanguage="checkChangedLang($event)"></app-search-language>
+        <app-search-language [selectedLanguage]="left"></app-search-language>
         <app-search-switch-lang (click)="reverseLanguage()"></app-search-switch-lang>
-        <app-search-language selectedLanguage="ua" changeLanguage="checkChangedLang($event)"></app-search-language>
+        <app-search-language [selectedLanguage]="right" ></app-search-language>
         <app-search-top-terms></app-search-top-terms>
     </div>
     <div class="search-lang-search">
-        <app-search-searchbar></app-search-searchbar>
+        <app-search-searchbar [searchLang]="left"></app-search-searchbar>
     </div>
 </div>

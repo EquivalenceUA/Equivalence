@@ -1,5 +1,8 @@
-<app-word-search></app-word-search>
-<div class="container">
-    <app-word-def-head [word]="getWord$ | async"></app-word-def-head>
-    <app-word-def-main [word]="getWord$ | async"></app-word-def-main>
+<div class="main">
+    <app-word-search></app-word-search>
+    <div class="container">
+        <app-word-def-head [word]="word"></app-word-def-head>
+        <app-word-def-main [word]="word"></app-word-def-main>
+    </div>
+
 </div>

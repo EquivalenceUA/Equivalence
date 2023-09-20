@@ -7,3 +7,9 @@ app-about-header{
     align-items: center;
     margin: 2rem 0;
 }
+
+@media screen and (max-width:1600px) {
+    .container{
+        padding: 0;
+    }
+}

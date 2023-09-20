@@ -1,6 +1,6 @@
 .main-categories-part{
-    max-width: fit-content;
-    max-height: fit-content;
+    margin-top: 24px;
+    height: 60%;
 }
 
 .main-language{
@@ -8,4 +8,10 @@
     border-radius: 12px;
     margin: 16px;
     padding: 12px 0;
+}
+
+@media screen and (max-width:1600px) {
+    .main-categories-part{
+        margin-top: 20px;
+    }
 }

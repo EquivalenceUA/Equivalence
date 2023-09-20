@@ -7,17 +7,23 @@ import { RouterModule } from '@angular/router';
 import { AboutModule } from './organism/about/about.module';
 import { WordDefModule } from './organism/word-def/word-def.module';
 import { WordSearchModule } from './organism/word-search/word-search.module';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
 import { LogInModule } from './organism/log-in/log-in.module';
 import { HomeModule } from './organism/home/home.module';
-import { SignUpFormModule } from './organism/sign-up-form/sign-up-form.module';
+import { SignUpModule } from './organism/sign-up/sign-up.module';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { UnderMaintenanceComponent } from './organism/under-maintenance/under-maintenance.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    UnderMaintenanceComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -29,11 +35,13 @@ import { SignUpFormModule } from './organism/sign-up-form/sign-up-form.module';
     LogInModule,
     RouterModule,
     HomeModule,
-    SignUpFormModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
+    SignUpModule,
+    HttpClientModule,
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+    StoreModule.forRoot({}, {})
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

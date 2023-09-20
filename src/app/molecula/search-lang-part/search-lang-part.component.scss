@@ -1,5 +1,7 @@
 .search-lang-part{
     padding: 24px 16px;
+    border-radius: 12px;
+    background: #F8F9FD;
     .search-lang-choose{
         margin-bottom: 16px;
         display: flex;
@@ -7,4 +9,11 @@
             padding: 0 16px;
         }
     }
+}
+
+@media screen and (max-width: 1600px) {
+    .search-lang-part{
+        padding: 16px;
+    }
+    
 }

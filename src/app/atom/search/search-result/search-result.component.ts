@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Word } from 'db/word-interface';
-import { setWord } from 'src/app/supplying-stuff/app.actions';
-import { AppState } from 'src/app/supplying-stuff/app.state';
+import { WordService } from 'src/app/services/word.service';
+
+
 
 
 @Component({
@@ -12,11 +11,12 @@ import { AppState } from 'src/app/supplying-stuff/app.state';
 })
 export class SearchResultComponent {
   @Input() results: any;
+  @Input() searchLang:string = '';
 
-  constructor(private store: Store<{app: AppState}>){}
+  constructor(private word: WordService){}
 
-  passWordToWordComp(word: Word){
-    this.store.dispatch(setWord({value: word}))
+  saveTheWord(word: any){
+    this.word.setTheWord(word);
   }
 
 

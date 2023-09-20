@@ -1,6 +1,21 @@
-<div class="search-results" *ngIf="results">
-    <button class="search-results__result" *ngFor="let result of results" (click)="passWordToWordComp(result)" routerLink="/word">
-        <img src="../../../assets/main-lang/Eng-flag.svg" alt="flag">
-        <h4>{{result.engWord}}</h4>
+<div class="search-results" *ngIf="results" #resultes>
+    <button class="search-results__result" *ngFor="let result of results.slice(0, 5); " (click)="saveTheWord(result)" routerLink="/word">
+        <span class="left_part">
+            <img src="../../../assets/main-lang/Eng-flag.svg" alt="flag">
+            <h4 *ngIf="searchLang === 'eng'">{{result.engWord}}</h4>
+            <h4 *ngIf="searchLang === 'ua'">{{result.ukrWord}}</h4>
+        </span>
+        <span class="right_part">
+            <p>noun</p>
+        </span>
+    </button>
+    <button class="search-results__result" routerLink="/word">
+        <span class="left_part">
+            <img src="../../../assets/main-lang/Donate term.svg" alt="plus">
+            <h4>Could not find a term?</h4>
+        </span>
+        <span class="right_part">
+            <p class="donate">Donate term</p>
+        </span>
     </button>
 </div>

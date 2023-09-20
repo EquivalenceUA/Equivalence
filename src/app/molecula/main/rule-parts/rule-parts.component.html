@@ -1,0 +1,8 @@
+<div class="rule-part">
+    <div class="rule-part__title">
+        {{ruleParts.ruleName}}
+    </div>
+    <div class="rule-part__grid">
+        <app-rule-part *ngFor="let part of ruleParts.ruleParts" [rulePart]="part"></app-rule-part>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.subcategories__title{
+    padding: 0 24px;
+    & h4{
+        color:  #211D4F;
+        font-family: 'Rubik', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+    }
+}
+
+.subcategories-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px 0 24px 24px;
+    gap: 12px 20px;
+    height: 80%;
+}

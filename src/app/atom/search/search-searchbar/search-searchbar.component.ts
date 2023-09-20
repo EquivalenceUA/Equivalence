@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { WORDS } from 'db/first-db';
+import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search-searchbar',
@@ -7,30 +7,47 @@ import { WORDS } from 'db/first-db';
   styleUrls: ['./search-searchbar.component.scss']
 })
 export class SearchSearchbarComponent {
-
+  @Input() searchLang:string = '';
+  @ViewChild('searchInput')
+  searchInput!: ElementRef;
+  @ViewChild('results')
+  results!: ElementRef;
+  onWordRoute: boolean = false;
   searchTerm: string = '';
-  words = WORDS;
-  searchResults: any;
-  constructor(){
-    
+  searchResults: any = {};
+  isVisible = false;
+  constructor( private http: HttpClient,){
   }
+
+  clearInput(){
+    this.searchInput.nativeElement.value = "";
+    this.results.nativeElement.style.display = "none"
+    this.isVisible = false
+  }
+
+
   
-  search(term: string){
-    return new Promise((res, rej)=>{
-      if(term.length < 1){
-        rej(this.searchResults = [] && console.error('No letters in search'))
-      }else{        
-        let results = [];
-        for (let word of this.words) {
-          // TODO Need to change this part for the future to search better
-          if (word.engWord.match(new RegExp('^' + term, 'i'))) {
-            results.push(word);
-          }
-          if(results.length>= 10){
-            res(this.searchResults = results);
-          }
-        }
-        res(this.searchResults = results);
+  searchWord(searchWord: string){
+    if(this.results.nativeElement.style.display == "none"){
+      this.results.nativeElement.style.display = "flex"
+    }
+    if(searchWord.length<1){
+      this.isVisible = false
+      return
+    }
+    this.isVisible = true;
+    let searchWordEng = {word: searchWord, lang: this.searchLang}
+    this.http.post('http://localhost:3000/api/users/word', searchWordEng)
+    .subscribe({
+      next: response=> {
+        console.log('Words have been found: ', response);
+        this.searchResults = response;
+      },
+      error: error => {
+        console.error('Error searching for word:', error);
+      },
+      complete: () => {
+        console.log('Word found successfully.');
       }
     })
   }

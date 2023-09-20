@@ -7,9 +7,8 @@ import { WordDefTransComponent } from 'src/app/atom/word-def/word-def-trans/word
 import { WordDefDefinComponent } from 'src/app/atom/word-def/word-def-defin/word-def-defin.component';
 import { WordDefExampleComponent } from 'src/app/atom/word-def/word-def-example/word-def-example.component';
 import { WordSearchModule } from '../word-search/word-search.module';
-import { wordReducer } from 'src/app/supplying-stuff/app.reducers';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+
+
 
 
 
@@ -25,8 +24,6 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     CommonModule,
     WordSearchModule,
-    StoreModule.forFeature('wordDefModule', {word: wordReducer}),
-    EffectsModule.forFeature([])
 
   ],
   exports: [

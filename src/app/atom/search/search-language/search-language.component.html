@@ -1,8 +1,3 @@
-<img [src]="src" alt="">
-<select name="language" class="language" #controlledSelect>
-    <option value="eng" [ngClass]="{'hidden': option1.selected}" #option1>
-        English
-    </option>
-    <option value="ua" [ngClass]="{'hidden': option2.selected}" #option2>Ukrainian</option>
-</select>
+<img [src]="flag" alt="">
+<button name="language" class="language" #controlledSelect>{{language}}</button>
 

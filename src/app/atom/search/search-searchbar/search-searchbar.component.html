@@ -4,10 +4,17 @@
         name="searchTerm" 
         placeholder="Type any term here" 
         [(ngModel)]="searchTerm" 
-        (ngModelChange)="search(searchTerm.toString())"
+        (ngModelChange)="searchWord(searchTerm.toString())"
+        #searchInput
     >
+    <span class="search__clear" (click)="clearInput()" [style.visibility]="isVisible ? 'visible' : 'hidden'">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7627 3.14645C15.958 3.34171 15.958 3.65829 15.7627 3.85355L6.76273 12.8536C6.56747 13.0488 6.25089 13.0488 6.05563 12.8536C5.86036 12.6583 5.86036 12.3417 6.05563 12.1464L15.0556 3.14645C15.2509 2.95118 15.5675 2.95118 15.7627 3.14645Z" fill="#211D4F"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.05563 3.14645C6.25089 2.95118 6.56747 2.95118 6.76273 3.14645L15.7627 12.1464C15.958 12.3417 15.958 12.6583 15.7627 12.8536C15.5675 13.0488 15.2509 13.0488 15.0556 12.8536L6.05563 3.85355C5.86036 3.65829 5.86036 3.34171 6.05563 3.14645Z" fill="#211D4F"/>
+          </svg>
+    </span>
     <app-search-button></app-search-button>
 </form>
-<div class="results">
-    <app-search-result [results]="searchResults"></app-search-result>
+<div class="results" *ngIf="searchTerm.length>0" #results>
+    <app-search-result [results]="searchResults.words" [searchLang]="searchLang"></app-search-result>
 </div>

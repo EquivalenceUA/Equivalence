@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarIdiomOfTheDayComponent {
   @Input() idiom: string = ''
+
+  idiomh:boolean=false;
+
+  idiom_image = "../../../../assets/sidebar/term_of/term_of"
+  default = "_default.svg"
+  hover = "_hover.svg"
 }

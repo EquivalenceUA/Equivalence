@@ -1,14 +1,16 @@
 <div class="header-cont">
     <div class="nav-left">
-        <app-nav-breadcrumbs></app-nav-breadcrumbs>
+        <!-- <app-nav-breadcrumbs></app-nav-breadcrumbs>  -->
+        <!-- TODO: add Breadcrumbs Logic for 1.1.0 update -->    
     </div>
     <div class="nav-rigth">
-        <app-nav-language></app-nav-language>
-        <app-nav-dark-mode></app-nav-dark-mode>
+        <!-- <app-nav-language></app-nav-language>
+        <app-nav-dark-mode></app-nav-dark-mode> 
+            TODO: add those to for 1.1.0 update-->
         <div class="nav-logIn">
             <ng-container *ngIf="!isLoggedIn; else signedIn">
                 <app-nav-login (logInEvent)="logInUser($event)"></app-nav-login>
-                <app-nav-signup></app-nav-signup>
+                <app-nav-signup routerLink="/sign-up"></app-nav-signup>
             </ng-container>
     
         </div>

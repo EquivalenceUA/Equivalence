@@ -1,17 +1,32 @@
 <div class="sidebar-socials-container">
     <div class="sidebar-social">
-        <a href="#">
-            <img src="../../../../assets/sidebar/Instagram-icon.svg" alt="instagram">
+        <a href="/insta" (mouseenter)="instah = true" (mouseleave)="instah = false">
+            <ng-container *ngIf="!instah; else insta_hover">
+                <img [src]="insta+default" alt="instagram">
+            </ng-container>
+            <ng-template #insta_hover>
+                <img [src]="insta+hover" alt="instagram">
+            </ng-template>
         </a>
     </div>
     <div class="sidebar-social">
-        <a href="#">
-            <img src="../../../../assets/sidebar/Youtube-icon.svg" alt="instagram">
+        <a href="/youtube" (mouseenter)="youtubeh = true" (mouseleave)="youtubeh = false">
+            <ng-container *ngIf="!youtubeh; else youtube_hover">
+                <img [src]="youtube+default" alt="instagram">
+            </ng-container>
+            <ng-template #youtube_hover>
+                <img [src]="youtube+hover" alt="instagram">
+            </ng-template>
         </a>
     </div>
     <div class="sidebar-social">
-        <a href="#">
-            <img src="../../../../assets/sidebar/Contact us-icon.svg" alt="instagram">
+        <a href="/email" (mouseenter)="emailh = true" (mouseleave)="emailh = false">
+            <ng-container *ngIf="!emailh; else email_hover">
+                <img [src]="email+default" alt="instagram">
+            </ng-container>
+            <ng-template #email_hover>
+                <img [src]="email+hover" alt="instagram">
+            </ng-template>
         </a>
     </div>
 </div>

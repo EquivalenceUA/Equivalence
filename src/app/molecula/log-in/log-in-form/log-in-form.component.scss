@@ -1,0 +1,112 @@
+form{
+    max-width: 100%;
+    & div{
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0;
+    }
+    label{
+        color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+
+        /* Desktop/Text/Captions/Size L */
+        font-size: 14px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        &.errorLabel{
+            color:  var(--color-eq-functional-danger, #D92929);;
+        }
+    }
+    & input{
+        display: flex;
+        height: 48px;
+        padding: 0px 12px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        border: 1px solid #A9B4E4;
+        &::placeholder{
+            color: #A9B4E4;
+            font-size: 16px;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        &:hover{
+            border-color: #455BED;
+        }
+        &:focus, &:focus-visible{
+            border: 1px solid #455BED;
+            outline: none;
+        }
+    }
+    & .forgot{
+        display: flex;
+        width: 478px;
+        margin: 16px auto;
+        justify-content: center;
+        align-items: end;
+        &__a{
+            color: var(--color-eq-primary-main-for-btns, #4263FF);
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            text-decoration: none;
+        }
+    }
+    & button{
+        border: none;
+        display: flex;
+        width: 478px;
+        padding: 12px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        background: #4263FF;
+        color: #FEFEFE;
+        text-align: center;
+        font-size: 16px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        cursor: pointer;
+        &:hover{
+            background-color: #455BED;
+        }
+        &:disabled{
+            opacity: 0.64; 
+        }
+    }
+    & .donothave{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        & p{
+            color: var(--color-eq-primary-main-dark-blue-for-font, #211D4F);
+            text-align: center;
+            margin-right: 5px;
+            
+            font-family: Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        & a{
+            color: var(--color-eq-extended-accent-hover, #455BED); 
+            text-decoration: none;
+            font-family: Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
