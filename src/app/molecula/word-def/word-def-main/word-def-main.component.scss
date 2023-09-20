@@ -1,7 +1,12 @@
 .word-def-main{
     margin-top: 24px;
+        font-family: 'Rubik', sans-serif;
     &__explanation{
         margin: 8px 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
     }
 
     &__info{
@@ -19,7 +24,15 @@
         & .translation{
 
             &__word{
-
+                & p{
+                    border-radius: 32px;
+                    background:  #EDF1F6;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    padding: 0 5px;
+                }
             }
         }
     }
@@ -28,6 +41,10 @@
         margin: 32px 0;
         & .head{
             margin-bottom: 8px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
         }
         & .defins{
             display: grid;

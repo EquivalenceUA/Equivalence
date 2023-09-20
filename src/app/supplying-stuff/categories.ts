@@ -1,13 +1,13 @@
 export interface Category{
     name: string;
     imgSrc: string;
-    commingSoon: Boolean;
+    commingSoon: boolean;
     subcategories: Subcategory[]
 }
 export interface Subcategory{
-    name: String;
-    parentCategory:String;
-    commingSoon: Boolean;
+    name: string;
+    parentCategory:string;
+    commingSoon: boolean;
 }
 
 export const categories: Category[] = [
@@ -34,12 +34,12 @@ export const categories: Category[] = [
                 commingSoon: false,
             },
             {
-                name: "Contractual Law",
+                name: "Criminal Law",
                 parentCategory: "Legal Terms",
                 commingSoon: false,
             },
             {
-                name: "Corporate Law",
+                name: "Court Procedure",
                 parentCategory: "Legal Terms",
                 commingSoon: false,
             },
@@ -49,24 +49,24 @@ export const categories: Category[] = [
                 commingSoon: false,
             },
             {
-                name: "Litigation",
+                name: "Real Property Law",
                 parentCategory: "Legal Terms",
                 commingSoon: false,
             },
             {
-                name: "Migration Law",
+                name: "Company Law",
                 parentCategory: "Legal Terms",
                 commingSoon: false,
             },
             {
-                name: "Civil Law",
+                name: "General Legal Expressions",
                 parentCategory: "Legal Terms",
-                commingSoon: true,
+                commingSoon: false,
             },
             {
-                name: "Criminal Law",
+                name: "Contract Law",
                 parentCategory: "Legal Terms",
-                commingSoon: true,
+                commingSoon: false,
             },
             {
                 name: "Ecological Law",
@@ -122,7 +122,7 @@ export const categories: Category[] = [
         ]
     },
     {
-        name: 'IT',
+        name: 'IT Terms',
         imgSrc: '../../../../assets/category-tile/it/it',
         commingSoon: true,
         subcategories: [

@@ -8,6 +8,13 @@ import { WordSearchModule } from '../word-search/word-search.module';
 import { RouterModule } from '@angular/router';
 import { SubcategoriesGridComponent } from 'src/app/molecula/subcategories/subcategories-grid/subcategories-grid.component';
 import { SubcategoryComponent } from 'src/app/atom/subcategory/subcategory/subcategory.component';
+import { ScwitemComponent } from 'src/app/atom/scwitem/scwitem.component';
+import { ScwlistComponent } from 'src/app/molecula/scwlist/scwlist.component';
+import { RulesComponent } from 'src/app/molecula/main/rules/rules.component';
+import { RulePartsComponent } from 'src/app/molecula/main/rule-parts/rule-parts.component';
+import { RulePartComponent } from 'src/app/atom/rule-part/rule-part.component';
+import { RuleTileComponent } from 'src/app/atom/rule-tile/rule-tile.component';
+import { PresentSimpleComponent } from 'src/app/rule-pages/present-simple/present-simple.component';
 
 
 
@@ -18,7 +25,14 @@ import { SubcategoryComponent } from 'src/app/atom/subcategory/subcategory/subca
     MainCategoriesComponent,
     MainCategoryTileComponent,
     SubcategoriesGridComponent,
-    SubcategoryComponent
+    SubcategoryComponent,
+    ScwlistComponent,
+    ScwitemComponent,
+    RulesComponent,
+    RuleTileComponent,
+    RulePartComponent,
+    RulePartsComponent,
+    PresentSimpleComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +44,15 @@ import { SubcategoryComponent } from 'src/app/atom/subcategory/subcategory/subca
     MainComponent,
     MainCategoriesComponent,
     MainCategoryTileComponent,
-          
+    SubcategoriesGridComponent,
+    SubcategoryComponent,
+    ScwlistComponent,
+    ScwitemComponent,
+    RulesComponent,
+    RuleTileComponent,
+    RulePartComponent,
+    RulePartsComponent,
+    PresentSimpleComponent
   ]
 })
 export class MainModule { }

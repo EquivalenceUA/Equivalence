@@ -1,5 +1,5 @@
-<div class="subcategory-tile">
-    <div class="subcategory-tile_name" ngClass="">
+<div class="subcategory-tile" (click)="searchForSubcategoryWordsList(subcategory.name)" routerLink="/subcategory-words-list">
+    <div class="subcategory-tile_name">
         <h3 [ngClass]="subcategory.commingSoon ? 'disabled' : '' ">{{subcategory.name}}</h3>
     </div>
     <div class="comming-soon" *ngIf="subcategory.commingSoon">

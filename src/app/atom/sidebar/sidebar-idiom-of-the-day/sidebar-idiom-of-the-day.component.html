@@ -1,4 +1,4 @@
-<div class="idiomOfTheDay" (mouseenter)="idiomh=true" (mouseleave)="idiomh=false">
+<div class="idiomOfTheDay" (mouseenter)="idiomh=true" (mouseleave)="idiomh=false" routerLink="/day-idiom">
     <div class="idiomOfTheDay__image">
         <ng-container *ngIf="!idiomh; else idiom_hover">
             <img [src]='idiom_image+default' alt="button-icon" class="sidebar-button__icon">

@@ -19,20 +19,39 @@ const wordSchema = new Schema({
         type: [String],
         required: false
     },
-    hastag:{
-        type: String,
+    engExamples:{
+        type: [String],
         required: false
     },
-    likes:{
+    ukrExamples:{
+        type: [String],
+        required: false
+    },
+    hashes:{
+        type: [String],
+        required: false
+    },
+    numberOfLikes:{
         type: Number,
         default: 0,
         required: false
     },
-    donatedBy:{
+    isVerb:{
+        type: Boolean,
+        required: true,
+        default: false
+    },
+    author:{
         type: String,
         required: true,
         default: "Ivanna Pukman"
     },
+    subCategory:{
+        type: String,
+        required: true,
+    }
 });
 
-export default mongoose.model("Word", wordSchema);
+const Word = mongoose.model('word', wordSchema);
+
+module.exports = Word;

@@ -1,6 +1,6 @@
 <div class="sidebar-socials-container">
     <div class="sidebar-social">
-        <a href="#" (mouseenter)="instah = true" (mouseleave)="instah = false">
+        <a href="/insta" (mouseenter)="instah = true" (mouseleave)="instah = false">
             <ng-container *ngIf="!instah; else insta_hover">
                 <img [src]="insta+default" alt="instagram">
             </ng-container>
@@ -10,7 +10,7 @@
         </a>
     </div>
     <div class="sidebar-social">
-        <a href="#" (mouseenter)="youtubeh = true" (mouseleave)="youtubeh = false">
+        <a href="/youtube" (mouseenter)="youtubeh = true" (mouseleave)="youtubeh = false">
             <ng-container *ngIf="!youtubeh; else youtube_hover">
                 <img [src]="youtube+default" alt="instagram">
             </ng-container>
@@ -20,7 +20,7 @@
         </a>
     </div>
     <div class="sidebar-social">
-        <a href="#" (mouseenter)="emailh = true" (mouseleave)="emailh = false">
+        <a href="/email" (mouseenter)="emailh = true" (mouseleave)="emailh = false">
             <ng-container *ngIf="!emailh; else email_hover">
                 <img [src]="email+default" alt="instagram">
             </ng-container>

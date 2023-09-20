@@ -1,0 +1,44 @@
+<div class="scwlist">
+    <div class="scwlist__head">
+        {{nameOfSub}}
+    </div>
+    <hr>
+    <div class="scwlist__main">
+        <div class="scwlist__main--column" *ngFor="let column of totalColumns">
+            <a routerLink="/word" (click)="goToWord(word)" *ngFor="let word of column">{{word.engWord}}</a>
+        </div>
+    </div>
+    <hr>
+    <div class="scwlist__footer">
+        <div class="scwlist__footer--cp-container">
+            <p *ngIf="totalPages === 1">Only {{currentPage}} page ({{temsOnThePage}} terms)</p>
+            <div class="scwlist__footer--pagination-container" *ngIf="totalPages > 1">
+                <button class="step-button" (click)="previousPage()" [disabled]="currentPage === 1">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.4541 5.09082L6.54501 8.36355L9.4541 11.6363" stroke="#211D4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </button>
+
+                <button 
+                *ngFor="let pageNumber of pagesArray" 
+                [ngClass]="{'page-number': true, 'active-page': currentPage === +pageNumber}"
+                (click)="specificPage(+pageNumber)"
+                >{{pageNumber}}</button>
+
+                <button class="step-button" (click)="nextPage()" [disabled]="currentPage === pagesArray.length">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5459 10.9092L9.45499 7.63645L6.5459 4.36372" stroke="#211D4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </button>
+            </div>
+        </div>
+        <div class="scwlist__footer--gte-container">
+            <button class="go-to-exercise">
+                Go to Exercise
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5459 10.9092L9.45499 7.63645L6.5459 4.36372" stroke="#211D4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </button>
+        </div>
+    </div>
+</div>

@@ -19,7 +19,7 @@
         <div class="sidebar-button__title">Categories</div>
     </button>
     
-    <button class="sidebar-button" routerLink="/" (mouseenter)="donah = true" (mouseleave)="donah = false">
+    <button class="sidebar-button" routerLink="/donate-term" (mouseenter)="donah = true" (mouseleave)="donah = false">
         <ng-container *ngIf="!donah; else donate_hover">
             <img [src]='donate+default' alt="button-icon" class="sidebar-button__icon">
         </ng-container>
@@ -30,7 +30,7 @@
     </button>
     
     <h5 class="title">Learning</h5>
-    <button class="sidebar-button" routerLink="/about" (mouseenter)="rulesh = true" (mouseleave)="rulesh = false">
+    <button class="sidebar-button" routerLink="/rules" (mouseenter)="rulesh = true" (mouseleave)="rulesh = false">
         <ng-container *ngIf="!rulesh; else rules_hover">
             <img [src]='rules+default' alt="button-icon" class="sidebar-button__icon">
         </ng-container>
@@ -39,7 +39,7 @@
         </ng-template>
         <div class="sidebar-button__title">Rules</div>
     </button>
-    <button class="sidebar-button" routerLink="/about" (mouseenter)="exercih = true" (mouseleave)="exercih = false">
+    <button class="sidebar-button" routerLink="/exercises" (mouseenter)="exercih = true" (mouseleave)="exercih = false">
         <ng-container *ngIf="!exercih; else exercises_hover">
             <img [src]='exercises+default' alt="button-icon" class="sidebar-button__icon">
         </ng-container>

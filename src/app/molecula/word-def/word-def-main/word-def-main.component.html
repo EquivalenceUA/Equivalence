@@ -1,6 +1,6 @@
 <div class="word-def-main">
     <div class="word-def-main__explanation">
-        <p>Translation of "{{word.engWord}}" in Ukrainian</p>
+        <p>Translation of <b>"{{word.engWord}}"</b> in Ukrainian</p>
     </div>
     <div class="word-def-main__info">
         <div class="word-def-main__translation">
@@ -12,26 +12,28 @@
             </div>
         </div>
     
-        <div class="word-def-main__deffinitions">
-            <div class="head"><p>Definition in English</p></div>
+        <div class="word-def-main__deffinitions" *ngIf="word.engDescriptions.length">
+            <div class="head" *ngIf="word.engDescriptions.length">
+                <p>Definition in English</p>
+            </div>
             <div class="defins">
                 <div class="definition" *ngFor="let def of word.engDescriptions">
                     <p>{{def}}</p>
                 </div>
             </div>
         </div>
-        <div class="word-def-main__examples">
+        <div class="word-def-main__examples" *ngIf="word.engExamples.length">
             <div class="head">
                 <p>Example in sentence</p>
             </div>
             <div class="examples">
                 <div class="examples__eng">
-                    <div class="example" *ngFor="let example of word.engDescriptions">
+                    <div class="example" *ngFor="let example of word.engExamples">
                         <p>{{example}}</p>
                     </div>
                 </div>
                 <div class="examples__ukr" >
-                    <div class="example" *ngFor="let example of word.ukrDescriptions">
+                    <div class="example" *ngFor="let example of word.ukrExamples">
                         <p>{{example}}</p>
                     </div>
                 </div>

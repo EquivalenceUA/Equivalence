@@ -9,11 +9,9 @@ import { SearchSearchbarComponent } from 'src/app/atom/search/search-searchbar/s
 import { SearchResultComponent } from 'src/app/atom/search/search-result/search-result.component';
 import { SearchTermHashComponent } from 'src/app/atom/search/search-term-hash/search-term-hash.component';
 import { SearchButtonComponent } from 'src/app/atom/search/search-button/search-button.component';
-import { EffectsModule } from '@ngrx/effects';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { StoreModule } from '@ngrx/store';
-import { wordReducer } from 'src/app/supplying-stuff/app.reducers';
+
 
 
 
@@ -34,8 +32,6 @@ import { wordReducer } from 'src/app/supplying-stuff/app.reducers';
     CommonModule,
     FormsModule,
     RouterModule,
-    StoreModule.forFeature('wordSearchModule', wordReducer),
-    EffectsModule.forFeature([]), 
   ],
   exports: [
     WordSearchComponent,

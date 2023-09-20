@@ -1,6 +1,12 @@
-app-sidebar-menu-part{
-    margin: 16px 0;
-}
-app-sidebar-search-input{
-    margin-top: 10px;
+.sidebar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__menu-part{
+        margin: 16px 0;
+    }
+    &__search-input{
+        margin-top: 10px;
+    }
 }

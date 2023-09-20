@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Word } from 'db/word-interface';
+import { WordService } from 'src/app/services/word.service';
+
+
 
 
 @Component({
@@ -10,10 +11,13 @@ import { Word } from 'db/word-interface';
 })
 export class SearchResultComponent {
   @Input() results: any;
+  @Input() searchLang:string = '';
 
-  constructor(){}
+  constructor(private word: WordService){}
 
-
+  saveTheWord(word: any){
+    this.word.setTheWord(word);
+  }
 
 
 }

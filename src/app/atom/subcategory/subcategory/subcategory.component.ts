@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SubcategoryWordListService } from 'src/app/services/subcategory-word-list.service';
 import { Subcategory } from 'src/app/supplying-stuff/categories';
 
 @Component({
@@ -8,7 +9,12 @@ import { Subcategory } from 'src/app/supplying-stuff/categories';
 })
 export class SubcategoryComponent {
   
-  
   @Input()
   subcategory!: Subcategory;
+  
+  constructor(private _subcategoryWordList:SubcategoryWordListService){}
+
+  searchForSubcategoryWordsList(subcategoryName:string){
+    this._subcategoryWordList.setSubcateg(subcategoryName);
+  }
 }

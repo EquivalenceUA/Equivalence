@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { WORDS } from 'db/first-db';
 import { Word } from 'db/word-interface';
-import { Observable } from 'rxjs';
-import { selectWord } from 'src/app/supplying-stuff/app.reducers';
-import { AppState } from 'src/app/supplying-stuff/app.state';
+import { WordService } from 'src/app/services/word.service';
+
 
 
 @Component({
@@ -14,10 +11,15 @@ import { AppState } from 'src/app/supplying-stuff/app.state';
 })
 export class WordDefComponent {
 
-  word: Word = WORDS[2];
-  getWord$: Observable<Word>;
+  word!: Word;
+  
+  constructor(private wordS:WordService){
+    
+  }
 
-  constructor(private store: Store<{ app: AppState }>){
-    this.getWord$ = store.pipe(select(selectWord));
+  ngOnInit(){
+    this.wordS.word$.subscribe((newValue)=>{
+      this.word = newValue;
+    })
   }
 }

@@ -6,23 +6,18 @@
         <div class="word">
             <p>{{word.engWord}}</p>
         </div>
-        <div class="say">
+        <!-- <div class="say">
             <button><img src="../../../../assets/word-def/Speaker.svg" alt="speaker"></button>
-        </div>
+        </div> -->
+                <!-- TODO add it to 1.1.5 -->
     </div>
     <div class="word-def-head__additional">
         <div class="share"><img src="../../../../assets/word-def/Share icon.svg" alt="share btn"></div>
         <div class="save"><img src="../../../../assets/word-def/Save icon.svg" alt="save btn"></div>
     </div>
-    <div class="word-def-head__hash">
-        <div class="hashtag">
-            <p>#Legal Terms</p>
-        </div>
-        <div class="hashtag">
-            <p>#IHL</p>
-        </div>
-        <div class="hashtag">
-            <p>#Legal Experience</p>
+    <div class="word-def-head__hash" >
+        <div class="hashtag" *ngFor="let hash of word.hashes">
+            <p>#{{hash}}</p>
         </div>
     </div>
 </div>
