@@ -44,7 +44,7 @@ export class SignUpFormComponent {
       console.error('The form is invalida!')
     }
     const user = this.signUpForm.value;
-    this.http.post('http://localhost:3000/api/users/sign-up', user)
+    this.http.post('https://equivalenceua.github.io/Equivalence/api/users/sign-up', user)
       .subscribe({
         next: response=>{
           console.log('User signed up successfully:', response);

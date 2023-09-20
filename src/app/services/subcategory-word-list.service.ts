@@ -15,7 +15,7 @@ export class SubcategoryWordListService {
   getSubcategoryWordList(subcategory:string): Observable<any>{
     this.subcateg = subcategory;
     const searchCat = {subcategory: subcategory};
-    return this._http.post('http://localhost:3000/api/users/subcategory-words', searchCat);
+    return this._http.post('https://equivalenceua.github.io/Equivalence/api/users/subcategory-words', searchCat);
   }
 
   setSubcateg(subcategory:string){
