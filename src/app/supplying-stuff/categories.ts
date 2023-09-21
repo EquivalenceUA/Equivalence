@@ -13,7 +13,7 @@ export interface Subcategory{
 export const categories: Category[] = [
     {
         name: 'Slang',
-        imgSrc: '../../../../assets/category-tile/slang/slang',
+        imgSrc: 'assets/category-tile/slang/slang',
         commingSoon: true,
         subcategories: [
             {
@@ -25,7 +25,7 @@ export const categories: Category[] = [
     },
     {
         name: 'Legal Terms',
-        imgSrc: '../../../../assets/category-tile/legal-terms/legal',
+        imgSrc: 'assets/category-tile/legal-terms/legal',
         commingSoon: false,
         subcategories: [
             {
@@ -87,7 +87,7 @@ export const categories: Category[] = [
     },
     {
         name: 'Idioms',
-        imgSrc: '../../../../assets/category-tile/idioms/idiom',
+        imgSrc: 'assets/category-tile/idioms/idiom',
         commingSoon: true,
         subcategories: [
             {
@@ -99,7 +99,7 @@ export const categories: Category[] = [
     },
     {
         name: 'Aviation Terms',
-        imgSrc: '../../../../assets/category-tile/aviation/aviation',
+        imgSrc: 'assets/category-tile/aviation/aviation',
         commingSoon: true,
         subcategories: [
             {
@@ -111,7 +111,7 @@ export const categories: Category[] = [
     },
     {
         name: 'Medical Terms',
-        imgSrc: '../../../../assets/category-tile/medical/medical',
+        imgSrc: 'assets/category-tile/medical/medical',
         commingSoon: true,
         subcategories: [
             {
@@ -123,7 +123,7 @@ export const categories: Category[] = [
     },
     {
         name: 'IT Terms',
-        imgSrc: '../../../../assets/category-tile/it/it',
+        imgSrc: 'assets/category-tile/it/it',
         commingSoon: true,
         subcategories: [
             {

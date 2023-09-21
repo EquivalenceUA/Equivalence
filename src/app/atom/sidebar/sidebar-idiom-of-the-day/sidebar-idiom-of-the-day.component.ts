@@ -10,7 +10,7 @@ export class SidebarIdiomOfTheDayComponent {
 
   idiomh:boolean=false;
 
-  idiom_image = "../../../../assets/sidebar/term_of/term_of"
+  idiom_image = "assets/sidebar/term_of/term_of"
   default = "_default.svg"
   hover = "_hover.svg"
 }
