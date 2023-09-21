@@ -37,7 +37,7 @@ export class SearchSearchbarComponent {
     }
     this.isVisible = true;
     let searchWordEng = {word: searchWord, lang: this.searchLang}
-    this.http.post('https://equivalenceua.github.io/Equivalence/api/users/word', searchWordEng)
+    this.http.post('http://localhost:3000/api/users/word', searchWordEng)
     .subscribe({
       next: response=> {
         console.log('Words have been found: ', response);
