@@ -22,24 +22,27 @@
             flex-direction: column;
             gap: 16px;
             text-align: center;
+            align-items: center;
             & h2{
                 color: #455BED;
                 font-family: 'Rubik';
-                font-size: 48px;
+                font-size: 32px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 130%;
             }
             & h6{
                 font-family: 'Rubik';
-                font-size: 24px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 130%; 
+                text-align: center;
+                width: 60%;
             }
             & p{
                 font-family: 'Lato';
-                font-size: 18px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 150%;

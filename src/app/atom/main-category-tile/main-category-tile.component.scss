@@ -16,7 +16,9 @@
         cursor: pointer;
     }
     &_name{
-        font-weight: 600;
+        & h3{
+            font-weight: 600;
+        }
     }
 }
 

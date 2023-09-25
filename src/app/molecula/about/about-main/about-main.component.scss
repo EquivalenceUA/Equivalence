@@ -11,7 +11,7 @@
     
     .about-main{
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 80% 20%;
         &__left{
             margin-right: 5rem;
             color: #211D4F;
@@ -31,25 +31,6 @@
                 }
                 .author{
                     margin-top: 8px;
-                }
-            }
-        }
-        &__right{
-            img{
-                height: 90%;
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width:1600px) {
-    .about-cont{
-        overflow-y: scroll;
-        .about-main{
-            &__right{
-                img{
-                    height: 80%;
                 }
             }
         }
