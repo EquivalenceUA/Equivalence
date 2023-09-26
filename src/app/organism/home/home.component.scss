@@ -22,6 +22,7 @@
     grid-row: 1/2;
     grid-column: 2/13;
     position: sticky;
+    border-bottom: 2px solid #F8F9FD;
 }
 
 .main-content-container{
@@ -29,4 +30,5 @@
     grid-column: 2/13;
     padding: 0 80px;
     overflow: auto;
+    margin-top: 8px;
 }

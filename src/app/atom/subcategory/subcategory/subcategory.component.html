@@ -1,4 +1,4 @@
-<div class="subcategory-tile" (click)="searchForSubcategoryWordsList(subcategory.name)" routerLink="/subcategory-words-list">
+<div class="subcategory-tile" [ngClass]="{'hover': !subcategory.commingSoon}" (click)="searchForSubcategoryWordsList(subcategory.name)" routerLink="/subcategory-words-list">
     <div class="subcategory-tile_name">
         <h3 [ngClass]="subcategory.commingSoon ? 'disabled' : '' ">{{subcategory.name}}</h3>
     </div>

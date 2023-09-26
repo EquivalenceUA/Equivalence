@@ -1,61 +1,65 @@
 <div class="menu">
-    <h5 class="title">Vocabulary</h5>
-    <button class="sidebar-button" routerLink="/" (mouseenter)="homeh = true" (mouseleave)="homeh = false">
-        <ng-container *ngIf="!homeh; else home_hover">
-            <img [src]='home+default' alt="button-icon" class="sidebar-button__icon">
-        </ng-container>
-        <ng-template #home_hover>
-            <img [src]='home+hover' alt="button-icon" class="sidebar-button__icon">
-        </ng-template>
-        <div class="sidebar-button__title">Home</div>
-    </button>
-    <button class="sidebar-button" routerLink="/categories" (mouseenter)="cateh = true" (mouseleave)="cateh = false">
-        <ng-container *ngIf="!cateh; else categories_hover">
-            <img [src]='categories+default' alt="button-icon" class="sidebar-button__icon">
-        </ng-container>
-        <ng-template #categories_hover>
-            <img [src]='categories+hover' alt="button-icon" class="sidebar-button__icon">
-        </ng-template>
-        <div class="sidebar-button__title">Categories</div>
-    </button>
+    <div class="menu__top">
+        <h5 class="title">Vocabulary</h5>
+        <button class="sidebar-button" routerLink="/" (mouseenter)="homeh = true" (mouseleave)="homeh = false">
+            <ng-container *ngIf="!homeh; else home_hover">
+                <img [src]='home+default' alt="button-icon" class="sidebar-button__icon">
+            </ng-container>
+            <ng-template #home_hover>
+                <img [src]='home+hover' alt="button-icon" class="sidebar-button__icon">
+            </ng-template>
+            <div class="sidebar-button__title">Home</div>
+        </button>
+        <button class="sidebar-button" routerLink="/categories" (mouseenter)="cateh = true" (mouseleave)="cateh = false">
+            <ng-container *ngIf="!cateh; else categories_hover">
+                <img [src]='categories+default' alt="button-icon" class="sidebar-button__icon">
+            </ng-container>
+            <ng-template #categories_hover>
+                <img [src]='categories+hover' alt="button-icon" class="sidebar-button__icon">
+            </ng-template>
+            <div class="sidebar-button__title">Categories</div>
+        </button>
+        
+        <button class="sidebar-button" routerLink="/donate-term" (mouseenter)="donah = true" (mouseleave)="donah = false">
+            <ng-container *ngIf="!donah; else donate_hover">
+                <img [src]='donate+default' alt="button-icon" class="sidebar-button__icon">
+            </ng-container>
+            <ng-template #donate_hover>
+                <img [src]='donate+hover' alt="button-icon" class="sidebar-button__icon">
+            </ng-template>
+            <div class="sidebar-button__title">Donate term</div>
+        </button>
+    </div>
+    <div class="menu__bottom">
+        <h5 class="title">Learning</h5>
+        <button class="sidebar-button" routerLink="/rules" (mouseenter)="rulesh = true" (mouseleave)="rulesh = false">
+            <ng-container *ngIf="!rulesh; else rules_hover">
+                <img [src]='rules+default' alt="button-icon" class="sidebar-button__icon">
+            </ng-container>
+            <ng-template #rules_hover>
+                <img [src]='rules+hover' alt="button-icon" class="sidebar-button__icon">
+            </ng-template>
+            <div class="sidebar-button__title">Rules</div>
+        </button>
+        <button class="sidebar-button" routerLink="/exercises" (mouseenter)="exercih = true" (mouseleave)="exercih = false">
+            <ng-container *ngIf="!exercih; else exercises_hover">
+                <img [src]='exercises+default' alt="button-icon" class="sidebar-button__icon">
+            </ng-container>
+            <ng-template #exercises_hover>
+                <img [src]='exercises+hover' alt="button-icon" class="sidebar-button__icon">
+            </ng-template>
+            <div class="sidebar-button__title">Exercises</div>
+        </button>
+        
+        <button class="sidebar-button" routerLink="/about" (mouseenter)="abouth = true" (mouseleave)="abouth = false">
+            <ng-container *ngIf="!abouth; else about_hover">
+                <img [src]='about+default' alt="button-icon" class="sidebar-button__icon">
+            </ng-container>
+            <ng-template #about_hover>
+                <img [src]='about+hover' alt="button-icon" class="sidebar-button__icon">
+            </ng-template>
+            <div class="sidebar-button__title">About us</div>
+        </button>
+    </div>
     
-    <button class="sidebar-button" routerLink="/donate-term" (mouseenter)="donah = true" (mouseleave)="donah = false">
-        <ng-container *ngIf="!donah; else donate_hover">
-            <img [src]='donate+default' alt="button-icon" class="sidebar-button__icon">
-        </ng-container>
-        <ng-template #donate_hover>
-            <img [src]='donate+hover' alt="button-icon" class="sidebar-button__icon">
-        </ng-template>
-        <div class="sidebar-button__title">Donate term</div>
-    </button>
-    
-    <h5 class="title">Learning</h5>
-    <button class="sidebar-button" routerLink="/rules" (mouseenter)="rulesh = true" (mouseleave)="rulesh = false">
-        <ng-container *ngIf="!rulesh; else rules_hover">
-            <img [src]='rules+default' alt="button-icon" class="sidebar-button__icon">
-        </ng-container>
-        <ng-template #rules_hover>
-            <img [src]='rules+hover' alt="button-icon" class="sidebar-button__icon">
-        </ng-template>
-        <div class="sidebar-button__title">Rules</div>
-    </button>
-    <button class="sidebar-button" routerLink="/exercises" (mouseenter)="exercih = true" (mouseleave)="exercih = false">
-        <ng-container *ngIf="!exercih; else exercises_hover">
-            <img [src]='exercises+default' alt="button-icon" class="sidebar-button__icon">
-        </ng-container>
-        <ng-template #exercises_hover>
-            <img [src]='exercises+hover' alt="button-icon" class="sidebar-button__icon">
-        </ng-template>
-        <div class="sidebar-button__title">Exercises</div>
-    </button>
-    
-    <button class="sidebar-button" routerLink="/about" (mouseenter)="abouth = true" (mouseleave)="abouth = false">
-        <ng-container *ngIf="!abouth; else about_hover">
-            <img [src]='about+default' alt="button-icon" class="sidebar-button__icon">
-        </ng-container>
-        <ng-template #about_hover>
-            <img [src]='about+hover' alt="button-icon" class="sidebar-button__icon">
-        </ng-template>
-        <div class="sidebar-button__title">About us</div>
-    </button>
 </div>

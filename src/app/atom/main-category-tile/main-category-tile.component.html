@@ -1,4 +1,4 @@
-<div class="category-tile" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" routerLink="/subcategories">
+<div class="category-tile" [ngClass]="{'hovered' : !category.commingSoon}" (mouseenter)="isHovered = true && !category.commingSoon" (mouseleave)="isHovered = false && !category.commingSoon" routerLink="/subcategories">
     <div class="category-tile__icon">
         <ng-container *ngIf="!isHovered; else hover_image">
             <img [src]='category.imgSrc+default' alt="button-icon" class="sidebar-button__icon">

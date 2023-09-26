@@ -71,16 +71,16 @@ export class ScwlistComponent implements OnInit{
   }
   nextPage(){
     this.currentPage +=1;
-    this.getColumnWords(this.listOfWords.subcategoryWords);
+    this.getColumnWords(this.listOfWords.words);
   }
 
   previousPage(){
     this.currentPage -=1;
-    this.getColumnWords(this.listOfWords.subcategoryWords);
+    this.getColumnWords(this.listOfWords.words);
   }
   specificPage(page:number){
     this.currentPage = page;
-    this.getColumnWords(this.listOfWords.subcategoryWords);
+    this.getColumnWords(this.listOfWords.words);
   }
 
 }

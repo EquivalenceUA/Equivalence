@@ -10,17 +10,22 @@
     border: 1px solid #C2C9E8;
     background-color: #FEFEFE;
     height: 60%;
-    &:hover{
-        background: #EDF1F6; 
-        cursor: pointer;
-    }
     &_name{
         width: 60%;
         text-align: center;
-        font-family: 'Rubik', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
+        & h3{
+            font-family: 'Rubik', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+}
+
+.hover{
+    &:hover{
+        background: #EDF1F6; 
+        cursor: pointer;
     }
 }
 
@@ -31,11 +36,20 @@
     align-items: center;
     width: 101px;
     height: 24px;
+    padding:  0 4px;
     background: #EDF1F6;
     border-radius: 50px;
     position: absolute;
     top: -8px;
     right: 0;
+    & h5{
+        opacity: 0.6; 
+        font-family: 'Lato';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
 }
 
 .disabled{
